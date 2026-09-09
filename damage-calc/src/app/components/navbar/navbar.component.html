@@ -40,10 +40,10 @@
     <ng-container *ngIf="languageService.language.value">
         <span *ngIf="screenService.extraLargeScreen.value; else settingsCog" class="absolute-right neat-container">
             <span class="neat-container icon-holder">
-                <button type="button" (click)="openKofi()"  mat-flat-button>
+                <!--<button type="button" (click)="openKofi()"  mat-flat-button>
                     <img class="webp-icon" src="assets/icons/ko-fi.webp" alt="ko-fi icon">
                     {{'donate' | translate:'ui'}}
-                </button>
+                </button>-->
                 <ng-template [ngTemplateOutlet]="darkModeToggle"></ng-template>
                 <ng-template [ngTemplateOutlet]="retroModeToggle"></ng-template>
             </span>
