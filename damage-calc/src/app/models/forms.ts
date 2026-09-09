@@ -100,6 +100,9 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
     casterHasPossession: {
         icon: 'buffs/possession-buff.png'
     },
+    casterHasIndomitable: {
+        icon: 'buffs/indomitable-buff.png'
+    },
     casterHasTrauma: {
         icon: 'debuffs/trauma-debuff.png'
     },
@@ -623,6 +626,7 @@ export class DamageFormData {
     casterHasSuperhumanization: boolean;
     targetHasSuperhumanization: boolean;
     casterHasPossession: boolean;
+    casterHasIndomitable: boolean;
     casterInjury: number;
     casterInvincible: boolean;
     casterMaxHP: number;
@@ -723,6 +727,7 @@ export class DamageFormData {
     targetSpeedDown: boolean;
     targetStunned: boolean;
     targetTargeted: boolean;
+    targetIndomitable: boolean;
     torrentSetStack: number;
     turnStack: number;
 
@@ -797,6 +802,7 @@ export class DamageFormData {
         this.casterHasSuperhumanization = _.get(data, 'casterHasSuperhumanization', false);
         this.targetHasSuperhumanization = _.get(data, 'targetHasSuperhumanization', false);
         this.casterHasPossession = _.get(data, 'casterHasPossession', false);
+        this.casterHasIndomitable = _.get(data, 'casterHasIndomitable', false);
         this.casterInvincible = _.get(data, 'casterInvincible', false);
         this.casterInjury = _.get(data, 'casterInjury', 0);
         this.casterMaxHP = _.get(data, 'casterMaxHP', 10000);
@@ -899,6 +905,7 @@ export class DamageFormData {
         this.targetHasRampage = _.get(data, 'targetHasRampage', false);
         this.targetStunned = _.get(data, 'targetStunned', false);
         this.targetTargeted = _.get(data, 'targetTargeted', false);
+        this.targetIndomitable = _.get(data, 'targetIndomitable', false);
         this.targetVigor = _.get(data, 'targetVigor', false);
         this.torrentSetStack = _.get(data, 'torrentSetStack', 0);
         this.turnStack = _.get(data, 'turnStack', 0);
@@ -956,6 +963,7 @@ export class DamageFormData {
     targetFinalDefense = () => {
         let defenseMultiplier = (1 + (this.targetDefenseUp ? BattleConstants.targetDefenseUp : 0)
         + (this.targetDefenseDown ? BattleConstants.targetDefenseDown : 0)
+        + (this.targetIndomitable ? BattleConstants.targetIndomitable : 0)
         + (this.targetPilfered ? BattleConstants.pilfer : 0)
         + (this.targetHasTrauma ? BattleConstants.trauma : 0)
         + (this.targetVigor ? BattleConstants.casterVigor - 1 : 0)

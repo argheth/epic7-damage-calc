@@ -52,7 +52,7 @@ export class DamageService {
   getGlobalDefenseMult(isAftermath = false): number {
     let mult = 1.0;
     
-    for (const defenseModifier of ['targetDefenseUp', 'targetDefenseDown', 'targetVigor', 'targetHasTrauma', 'targetPilfered']) {
+    for (const defenseModifier of ['targetDefenseUp', 'targetDefenseDown', 'targetVigor', 'targetHasTrauma', 'targetPilfered', 'targetIndomitable']) {
       mult += this.damageForm[defenseModifier as keyof DamageFormData] ? BattleConstants[defenseModifier] : 0.0;
     }
 
@@ -219,7 +219,7 @@ export class DamageService {
     const artiDamage: number = this.currentHero.getAfterMathArtifactDamage(skill, this.currentArtifact, this.damageForm, this.getGlobalAttackMult(), this.getGlobalDefenseMult(true), this.dataService.currentTarget, soulburn, hitType) || 0;
     const skillDamage = this.currentHero.getAfterMathSkillDamage(skill, hitType, soulburn, this.currentArtifact, this.damageForm, this.getGlobalAttackMult(), this.getGlobalDefenseMult(true), this.dataService.currentTarget);
     // if more of these buffs get added, would probably be better to handle this iteratively over a list of key: value pairs
-    return detonation + debuffDamage + buffDamage + artiDamage + skillDamage + (this.damageForm.casterHasCascade ? 4000 : 0) + (this.damageForm.casterHasAbundance ? 2000 : 0) + (this.damageForm.casterHasOathOfPunishment ? 4000 : 0);
+    return detonation + debuffDamage + buffDamage + artiDamage + skillDamage + (this.damageForm.casterHasCascade ? 4000 * (this.damageForm.pursuitSet ? 1.2 : 1) : 0) + (this.damageForm.casterHasAbundance ? 2000 : 0) + (this.damageForm.casterHasOathOfPunishment ? 4000 : 0);
   }
 
   // Get the final damage numbers to be displayed in the table

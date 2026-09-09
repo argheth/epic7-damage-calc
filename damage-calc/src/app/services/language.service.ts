@@ -47,13 +47,13 @@ export class LanguageService {
   }
 
   async loadFallbackDict() {
-    const englishFile = await fetch(`../../assets/i18n/us.json`);
+    const englishFile = await fetch(`assets/i18n/us.json`);
     this.englishDict = await englishFile.json();
   }
 
   async setLanguage(language: Language, fromButton = false) {
     if (language) {
-      const translationFile = await fetch(`../../assets/i18n/${language?.countryCode}.json`);
+      const translationFile = await fetch(`assets/i18n/${language?.countryCode}.json`);
       this.translationDict = await translationFile.json();
   
       if (this.language.value === language && fromButton) {

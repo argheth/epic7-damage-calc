@@ -22,7 +22,7 @@
           "options": {
             "outputPath": "../docs",
             "index": "src/index.html",
-            "baseHref": "https://e7calc.xyz",
+            "baseHref": "/epic7-damage-calc/",
             "polyfills": [
               "src/polyfills.ts"
             ],

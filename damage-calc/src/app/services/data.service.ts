@@ -35,7 +35,7 @@ export class DataService {
   ];
 
   attackModifiers = [
-    'decreasedAttack', 'attackUp', 'attackUpGreat', 'casterVigor', 'casterEnraged',
+    'decreasedAttack', 'attackUp', 'attackUpGreat', 'casterVigor', 'casterEnraged', 'casterIndomitable',
     'casterHasStarsBlessing', 'casterHasPossession',
     'casterPromotionStack', 'casterSpoilsStack', 'casterPilfered', 'casterHasDemonBladeUnleashed',
     'casterOverload', 'casterEnergyDepletion', 'casterHasGodOfBattle'

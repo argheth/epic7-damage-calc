@@ -376,6 +376,12 @@
                         {{'decreasedDefense' | translate:'form'}}
                     </span>
                 </mat-checkbox>
+                <mat-checkbox class="small-margin-top" [checked]="inputValues.targetIndomitable" (change)="inputChange('targetIndomitable', $event.checked)">
+                    <span class="neat-container">
+                        <img class="png-icon medium tiny-margin-right" src="assets/buffs/indomitable-buff.png" alt="Indomitable Buff">
+                        {{'indomitable' | translate:'form'}}
+                    </span>
+                </mat-checkbox>
                 <mat-checkbox class="small-margin-top" [checked]="inputValues.targetTargeted" (change)="inputChange('targetTargeted', $event.checked)">
                     <span class="neat-container">
                         <img class="png-icon medium tiny-margin-right" src="assets/debuffs/target-debuff.png" alt="Target debuff">
@@ -615,8 +621,8 @@
                     <div class="credit-column">
                         <h2>{{'credits' | translate:'ui'}}</h2>
                         <p>
-                            {{'discord'| translate:'ui'}}: &#64;tyopoyt<br>
-                            {{'thanksCreator'| translate:'ui'}}, Maphe<br>
+                            {{'discord'| translate:'ui'}}: &#64;argheth<br>
+                            {{'thanksCreator'| translate:'ui'}}, Maphe and tyopoyt<br>
                             {{'thanksHelp'| translate:'ui'}}: Thunder_God, okloio, haie<br>
                             {{'translation'| translate:'ui'}}: Rano / TriATK / unown <app-flag [country]="'cn'"></app-flag>
                             / <span class="icon-line"><img class="icon tiny tiny-margin-left tiny-margin-right svg-icon" src="assets/icons/incognito.svg" alt="Anonymous"></span>

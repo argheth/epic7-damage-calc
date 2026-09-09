@@ -1910,4 +1910,29 @@ export const SkillIDs: Record<string, Record<string, string>> = {
         "s2": "sk_c5069_2",
         "s3": "sk_c5069_3"
     },
+    "aube": {
+        "s1": "sk_c5190_1",
+        "s2": "sk_c5190_2",
+        "s3": "sk_c5190_3"
+    },
+    "eye_of_the_abyss_fumyr": {
+        "s1": "sk_c5147_1",
+        "s2": "sk_c5147_2",
+        "s3": "sk_c5147_3"
+    },
+    "lisette": {
+        "s1": "sk_c2186_1", 
+        "s2": "sk_c2186_2",
+        "s3": "sk_c2186_3"
+    },
+    "tidal_rift_elvira": {
+        "s1": "sk_c2148_1",
+        "s2": "sk_c2148_2",
+        "s3": "sk_c2148_3"
+    },
+    "uncharted_pioneer_politis": {
+        "s1": "sk_c5112_1",
+        "s2": "sk_c5112_2",
+        "s3": "sk_c5112_3"
+    },
 }

@@ -21,6 +21,7 @@ export const BattleConstants: Record<string, number> = {
   'penetrationSet': 0.15,
   'targetDefenseUp': 0.6,
   'targetDefenseDown': -0.7,
+  'targetIndomitable': 0.3,
   'target': 1.15,
   'caster-fury': 1.3,
   'spdUp': 1.3, 

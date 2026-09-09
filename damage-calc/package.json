@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && node -e \"const fs=require('fs'); fs.cpSync('../docs/browser', '../docs', {recursive: true}); fs.rmSync('../docs/browser', {recursive: true, force: true}); fs.copyFileSync('../docs/index.html', '../docs/404.html');\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:snapshots:generate": "tsx --tsconfig tsconfig.json scripts/generate-snapshots.ts",
