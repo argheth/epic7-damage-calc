@@ -313,6 +313,12 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
         icon: 'buffs/blood-aura-buff.png',
         default: false
     },
+    dirgeBullets: {
+        max: 10,
+        min: 0,
+        defaultValue: 0,
+        step: 1
+    },
     numberOfTargets: {
         max: 9,
         min: 1,
@@ -660,6 +666,7 @@ export class DamageFormData {
     casterVigor: boolean;
     critDamage: number;
     increasedCritDamage: boolean;
+    dirgeBullets: number;
     criticalHitStack: number;
     damageReduction: number;
     additionalDamageReduction: number;
@@ -841,6 +848,7 @@ export class DamageFormData {
         this.casterVigor = _.get(data, 'casterVigor', false);
         this.critDamage = _.get(data, 'critDamage', 250);
         this.increasedCritDamage = _.get(data, 'increasedCritDamage', false);
+        this.dirgeBullets = _.get(data, 'dirgeBullets', 0);
         this.criticalHitStack = _.get(data, 'criticalHitStack', 0)
         this.damageReduction = _.get(data, 'damageReduction', 0);
         this.additionalDamageReduction = _.get(data, 'additionalDamageReduction', 0);

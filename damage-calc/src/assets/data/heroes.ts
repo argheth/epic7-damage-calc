@@ -8741,7 +8741,7 @@ export const Heroes: Record<string, Hero> = {
   renoa: new Hero({
     element: HeroElement.dark,
     class: HeroClass.ranger,
-    heroSpecific: ['casterDefense'],
+    heroSpecific: ['casterDefense', 'dirgeBullets'],
     baseAttack: 970,
     baseHP: 5299,
     baseDefense: 603,
@@ -8754,6 +8754,9 @@ export const Heroes: Record<string, Hero> = {
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
         flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalDefense(artifact) * 0.08,
         flatTip: () => ({ casterDefense: 8 }),
+        critDmgBoost: (soulburn: boolean, inputValues: DamageFormData) => inputValues.dirgeBullets * 0.2,
+        critDmgBoostCapped: true,
+        critDmgBoostTip: (soulburn: boolean) => ({ dirgeBullets: 20 }), 
         isSingle: () => true,
       }),
       s1_bis: new Skill({
@@ -8764,11 +8767,15 @@ export const Heroes: Record<string, Hero> = {
         defenseScaling: true,
         flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalDefense(artifact) * 0.08,
         flatTip: () => ({ casterDefense: 8 }),
+        critDmgBoost: (soulburn: boolean, inputValues: DamageFormData) => inputValues.dirgeBullets * 0.2,
+        critDmgBoostCapped: true,
+        critDmgBoostTip: (soulburn: boolean) => ({ dirgeBullets: 20 }), 
         isSingle: () => true,
         isExtra: true,
       }),
     },
   }),
+
   requiem_roana: new Hero({
     element: HeroElement.dark,
     class: HeroClass.mage,
