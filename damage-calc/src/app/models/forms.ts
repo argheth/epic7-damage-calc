@@ -76,6 +76,11 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
         min: 1000,
         defaultValue: 10000
     },
+    dirgeBullet: {
+        max: 10,
+        min: 0,
+        defaultValue: 0
+    },
     casterDefenseUp: {
         icon: 'buffs/defense-buff.png'
     },
@@ -145,6 +150,14 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
     },
     casterEnraged: {
         icon: 'buffs/rage-buff.png'
+    },
+    
+    casterMoraleStack: {
+        max: 10,
+        min: 0,
+        defaultValue: 0,
+        step: 1,
+        icon: 'buffs/morale-buff.png'
     },
     targetEnraged: {
         icon: 'buffs/rage-buff.png'
@@ -598,6 +611,8 @@ export class DamageFormData {
     casterFullFocus: boolean;
     casterFury: boolean;
     casterBuffed: boolean;
+    casterMorale: boolean;
+    casterMoraleStack: number;
     casterHasBzzt: boolean;
     casterHasGodOfBattle: boolean;
     casterHasCollapse: boolean;
@@ -633,6 +648,7 @@ export class DamageFormData {
     casterMaxHPIncrease: number;
     casterLingeringFragranceStack: number;
     casterTurn: boolean;
+    dirgeBullet: number;
     allyMaxHP: number;
     casterNumberOfBuffs: number;
     alliesNumberOfBuffs: number;
@@ -763,6 +779,8 @@ export class DamageFormData {
         this.casterDefenseUp = _.get(data, 'casterDefenseUp', false);
         this.casterDefenseDown = _.get(data, 'casterDefenseDown', false);
         this.casterEnraged = _.get(data, 'casterEnraged', false);
+        this.casterMorale = _.get(data, 'casterMorale', false);
+        this.casterMoraleStack = _.get(data, 'casterMoraleStack', 0);
         this.casterEffectiveness = _.get(data, 'casterEffectiveness', 100);
         this.casterElementalWisdomStack = _.get(data, 'casterElementalWisdomStack', 0);
         this.casterPromotionStack = _.get(data, 'casterPromotionStack', 0);
@@ -808,6 +826,7 @@ export class DamageFormData {
         this.casterMaxHP = _.get(data, 'casterMaxHP', 10000);
         this.casterMaxHPIncrease = _.get(data, 'casterMaxHPIncrease', 0);
         this.casterLingeringFragranceStack = _.get(data, 'casterLingeringFragranceStack', 0);
+        this.dirgeBullet= _.get(data, 'dirgeBullet', 0);
         this.allyMaxHP = _.get(data, 'allyMaxHP', 10000);
         this.casterNumberOfBuffs = _.get(data, 'casterNumberOfBuffs', 0)
         this.alliesNumberOfBuffs = _.get(data, 'alliesNumberOfBuffs', 0)

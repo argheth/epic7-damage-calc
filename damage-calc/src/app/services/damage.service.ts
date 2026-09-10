@@ -94,6 +94,7 @@ export class DamageService {
     this.dataService.damageMultSets.forEach((set) => {
       mult += (this.damageForm[set as keyof DamageFormData] || !!this.damageForm[`${set}Stack` as keyof DamageFormData]) ? _.get(BattleConstants, set) * (_.get(this.damageForm, `${set}Stack`, 1) as number) : 0.0;
     });
+    mult += this.damageForm.casterMorale ? BattleConstants.casterMorale * this.damageForm.casterMoraleStack : 0.0;
 
     // For expedition mainly
     this.damageForm.defensePreset;

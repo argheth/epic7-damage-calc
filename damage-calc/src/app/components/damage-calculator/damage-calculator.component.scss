@@ -100,6 +100,55 @@
     }
 }
 
+.morale-icon-text {
+    display: inline-flex;
+    align-items: center;
+    margin-top: -0.4rem; // match the offset used on .morale-stack-input
+}
+
+.morale-stack-input {
+    display: inline-flex;
+    align-items: center;
+    margin-top: -0.4rem;
+    
+    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+    }
+    ::ng-deep .number-input-field {
+        width: 3rem;
+        
+        ::ng-deep .mat-mdc-text-field-wrapper {
+            height: 1.5rem;
+        }
+
+        ::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
+            height: 1.5rem;
+            padding: 0;
+        }
+    }
+
+    ::ng-deep button.side-input {
+        height: 1.5rem;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        line-height: 1.5rem;
+
+        ::ng-deep .mdc-button__label {
+            padding: 0;
+        }
+    }
+
+    ::ng-deep input[type="number"] {
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
 .damage-graph {
     // height: 20rem;
     height: max-content;

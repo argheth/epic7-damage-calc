@@ -11,7 +11,7 @@ import { Heroes } from 'src/assets/data/heroes';
 import { Hero, HeroClass, HeroElement } from 'src/app/models/hero';
 import { TranslationPipe } from 'src/app/pipes/translation.pipe';
 import { FormControl } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import * as _ from 'lodash-es';
 import { Artifacts } from 'src/assets/data/artifacts';
 import { Artifact } from 'src/app/models/artifact';
@@ -61,6 +61,7 @@ export class DamageCalculatorComponent implements OnInit, OnDestroy {
 
   Math = Math
 
+  casterMoraleStackValue = new BehaviorSubject<number>(0);
   // For form =======================================================
   // All hero entries
   heroes: [string, Hero][] = Object.entries(Heroes);
