@@ -591,6 +591,7 @@
     "decreasedDefense": "防御力DOWN",
     "defense": "防御力",
     "defenseIncreaseHint": "例: アウリウス, 小さな奇跡のカード, 連作【決意に満ちし兵たち】",
+    "divinity": "Divinity",
     "dualAttackStack": "デュアル攻撃スタック",
     "effect_chance": "スキルの効果発動率 (%)",
     "effectResistance": "術者の効果抵抗率",
@@ -937,6 +938,7 @@
     "twistedEidolonKayronFlashSlash": "閃光の一撃",
     "sezEncroach": "侵入します",
     "zioDisappear": "消える",
+    "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
     "harsettiWarning": "ハルセティのスキル3の説明には、HPスケーリングがあると述べていますが、乗数にはまだ含まれていないようであるため、ここでのスキル3のダメージは、HPスケーリングがわかるまで不正確になるでしょう。"
   },
   "titles": {

@@ -66,6 +66,13 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
         defaultValue: 0,
         icon: 'buffs/lingering-fragrance-buff.png'
     },
+    divinity: {
+        max: 4,
+        min: 0,
+        defaultValue: 0,
+        step: 1,
+        icon: 'buffs/divinity-buff.png'
+    },
     casterInjury: {
         max: 25000,
         min: 0,
@@ -652,6 +659,7 @@ export class DamageFormData {
     defensePercentUp: number;
     defensePreset?: DefensePreset;
     dualAttackStack: number;
+    divinity: number;
     elementalAdvantage: boolean;
     enemyCounterStack: number;
     enemyNumberOfDebuffs: number;
@@ -830,6 +838,7 @@ export class DamageFormData {
         this.defensePercentUp = _.get(data, 'defensePercentUp', 0);
         this.defensePreset = _.get(data, 'defensePreset', null);
         this.dualAttackStack = _.get(data, 'dualAttackStack', 0)
+        this.divinity = _.get(data, 'divinity', 0);
         this.elementalAdvantage = _.get(data, 'elementalAdvantage', false);
         this.enemyCounterStack = _.get(data, 'enemyCounterStack', 0)
         this.enemyNumberOfDebuffs = _.get(data, 'enemyNumberOfDebuffs', 0);
@@ -991,6 +1000,7 @@ export class DamageFormData {
                 * (!this.inBattleHP && this.casterHasSuperhumanization ? BattleConstants.superhumanization + 1 : 1)
                 * (!this.inBattleHP && this.casterHasGodOfBattle ? BattleConstants.casterHasGodOfBattle : 1)
                 * (!this.inBattleHP && this.casterLingeringFragranceStack ? (1 + this.casterLingeringFragranceStack * BattleConstants.lingeringFragrance) : 1)
+                * (!this.inBattleHP && this.divinity ? (1 + this.divinity * BattleConstants.divinity) : 1)
                );
     }
 

@@ -6790,7 +6790,7 @@ export const Heroes: Record<string, Hero> = {
     baseAttack: 830,
     baseHP: 5121,
     baseDefense: 735,
-    heroSpecific: ['casterMaxHP'],
+    heroSpecific: ['casterMaxHP', "divinity"],
     skills: {
       s1: new Skill({
         id: 's1',

@@ -587,6 +587,7 @@
         "decreasedDefense": "防守力降低",
         "defense": "防御力",
         "defenseIncreaseHint": "示例：亚乌利斯，小奇迹的卡片，果断士兵系列",
+        "divinity": "Divinity",
         "dualAttackStack": "双攻击堆栈",
         "effect_chance": "技能发动概率 (%)",
         "effectResistance": "果抵抗",
@@ -933,6 +934,7 @@
         "twistedEidolonKayronFlashSlash": "闪光斩",
         "sezEncroach": "蚕食",
         "zioDisappear": "灰飞烟灭",
+        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
         "harsettiWarning": "Harsetti的技能3描述说，它具有HP的扩展，但是乘数似乎还不包括它，因此她的技能3伤害可能是不正确的，直到我们知道她的HP缩放。"
     },
     "titles": {

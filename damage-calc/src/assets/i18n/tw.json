@@ -590,6 +590,7 @@
         "decreasedDefense": "防禦力減少",
         "defense": "防禦力",
         "defenseIncreaseHint": "例子:亞烏利斯,小小奇蹟賀年卡,《有決心的士兵》系列",
+        "divinity": "Divinity",
         "dualAttackStack": "雙攻擊堆棧",
         "effect_chance": "技能發動概率 (%)",
         "effectResistance": "果抵抗",
@@ -930,6 +931,7 @@
         "twistedEidolonKayronFlashSlash": "閃光斬",
         "sezEncroach": "蠶食",
         "zioDisappear": "灰飛煙滅",
+        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
         "harsettiWarning": "赫爾賽蒂的技能3描述說，它具有HP的擴展，但是乘數似乎還不包括它，因此她的技能3傷害可能是不正確的，直到我們知道她的HP縮放。"
     },
     "titles": {
