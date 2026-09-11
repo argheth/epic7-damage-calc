@@ -987,6 +987,7 @@ export const Heroes: Record<string, Hero> = {
     baseAttack: 1283,
     baseHP: 5138,
     baseDefense: 522,
+    heroSpecific: ['exclusiveEquipment3'],
     skills: {
       s1: new Skill({
         id: 's1',
@@ -1011,6 +1012,7 @@ export const Heroes: Record<string, Hero> = {
         rate: (soulburn: boolean) => soulburn ? 1.35 : 1.1,
         pow: () => 1,
         enhance: [0.05, 0.05, 0, 0.05, 0.15],
+        exclusiveEquipmentMultiplier: (inputValues: DamageFormData) => inputValues.exclusiveEquipment3 ? 0.1 : 0,
         isAOE: () => true,
       })
     }
@@ -11894,7 +11896,7 @@ export const Heroes: Record<string, Hero> = {
     baseAttack: 621,
     baseHP: 5474,
     baseDefense: 802,
-    heroSpecific: ['casterMaxHP', 'allyMaxHP'],
+    heroSpecific: ['casterMaxHP', 'allyMaxHP', 'exclusiveEquipment2'],
     skills: {
       s1: new Skill({
         id: 's1',
@@ -11908,9 +11910,9 @@ export const Heroes: Record<string, Hero> = {
         name: 'young_senya_help',
         hpScaling: true,
         rate: () => 1,
-        pow: () => 1,
-        fixed: (hitType: HitType, inputValues: DamageFormData, artifact: Artifact) => (hitType !== HitType.miss) ? inputValues.casterFinalMaxHP(artifact) * 0.15 : 0,
-        fixed2: (hitType: HitType, inputValues: DamageFormData) => (hitType !== HitType.miss) ? inputValues.allyMaxHP * 0.15 : 0,
+        pow: () => 1,//inputValues.exclusiveEquipment2 ? 0.1 : 0
+        fixed: (hitType: HitType, inputValues: DamageFormData, artifact: Artifact) => (hitType !== HitType.miss) ? inputValues.casterFinalMaxHP(artifact) * (inputValues.exclusiveEquipment2 ? 0.20 : 0.15) : 0,
+        fixed2: (hitType: HitType, inputValues: DamageFormData) => (hitType !== HitType.miss) ? inputValues.allyMaxHP * (inputValues.exclusiveEquipment2 ? 0.20 : 0.15) : 0,
         isExtra: true,
         isAOE: () => true,
       })

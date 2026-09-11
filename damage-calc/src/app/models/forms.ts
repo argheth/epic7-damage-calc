@@ -80,7 +80,7 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
     },
     allyMaxHP: {
         max: 50000,
-        min: 1000,
+        min: 0,
         defaultValue: 10000
     },
     casterDefenseUp: {
