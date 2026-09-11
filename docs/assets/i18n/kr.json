@@ -940,7 +940,7 @@
         "twistedEidolonKayronFlashSlash": "섬광참",
         "sezEncroach": "잠식",
         "zioDisappear": "사라져라",
-        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks and Exclusive Equipments. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
+        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks, Exclusive Equipments, and new Mitigation/Reduction passives. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
         "harsettiWarning": "하르세티의 S3 설명에 따르면 HP 스케일링이 있지만 승수에는 아직 포함되지 않은 것처럼 보이므로 HP 스케일링을 알기 전까지는 그녀의 기술 3 피해가 잘못 될 수 있습니다."
     },
     "titles": {
@@ -1086,6 +1086,8 @@
         "aurius": "아우리우스 (풀강)",
         "tCrozet": "무법자 크로제 (2스킬 패시브)",
         "eaton": "이튼 (2스킬 패시브)",
-        "dracoPlate": "드라고니언 플레이트"
+        "dracoPlate": "드라고니언 플레이트",
+        "lqcPassive": "Little Queen Charlotte (S2 Passive)",
+        "estelleMitigation": "Estelle (S2 Passive)"
     }
 }
