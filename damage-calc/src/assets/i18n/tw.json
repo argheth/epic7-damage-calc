@@ -931,7 +931,7 @@
         "twistedEidolonKayronFlashSlash": "閃光斬",
         "sezEncroach": "蠶食",
         "zioDisappear": "灰飛煙滅",
-        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks and Exclusive Equipments. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
+        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks, Exclusive Equipments, and new Mitigation/Reduction passives. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
         "harsettiWarning": "赫爾賽蒂的技能3描述說，它具有HP的擴展，但是乘數似乎還不包括它，因此她的技能3傷害可能是不正確的，直到我們知道她的HP縮放。"
     },
     "titles": {
@@ -1078,6 +1078,8 @@
         "aurius": "亞烏利斯 (滿破時)",
         "tCrozet": "不法之徒克羅澤 (被動)",
         "eaton": "伊頓 (被動)",
-        "dracoPlate": "龍族板甲 (滿破時)"
+        "dracoPlate": "龍族板甲 (滿破時)",
+        "lqcPassive": "Little Queen Charlotte (S2 Passive)",
+        "estelleMitigation": "Estelle (S2 Passive)"
     }
 }

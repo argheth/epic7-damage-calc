@@ -12,7 +12,7 @@ export const TargetPresetGroups: Record<string, DefensePreset[]> = {
             icon: 'icons/manual'
         },
     ],
-    wyvern13: [ //TODO: add translations for these into i18n files
+    /*wyvern13: [ //TODO: add translations for these into i18n files
         {
             id: 'blazeDragona13',
             name: 'Blaze Dragona',
@@ -285,7 +285,7 @@ export const TargetPresetGroups: Record<string, DefensePreset[]> = {
             hp: 87729,
             icon: 'monsters/azimanakBoss11'
         },
-    ],
+    ],*/
     expedition3: [
         {
             id: 'earthExp3',
@@ -395,6 +395,12 @@ export const TargetReductionPresetGroups: Record<string, ReductionPreset[]> = {
             label: '24%',
             damageReduction: 24,
             icon: 'artifacts/sepulcrum'
+        },{
+            id: 'lqcPassive',
+            name: 'Little Queen Charlotte (S2 Passive)',
+            label: '30%',
+            damageReduction: 30,
+            icon: 'heroes/little_queen_charlotte-icon'
         }
     ],
     damageTransfer: [
@@ -412,6 +418,13 @@ export const TargetReductionPresetGroups: Record<string, ReductionPreset[]> = {
             label: '40%',
             damageTransfer: 40,
             icon: 'buffs/escort-buff'
+        },
+        {
+            id: 'estelleMitigation',
+            name: 'Estelle (S2 Passive)',
+            label: '40%',
+            damageTransfer: 40,
+            icon: 'heroes/estelle-icon'
         },
         {
             id: 'offering',

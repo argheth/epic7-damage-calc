@@ -11049,6 +11049,7 @@ export const Heroes: Record<string, Hero> = {
         pow: () => 0.95,
         enhance: [0.05, 0.05, 0.05, 0, 0.05, 0.05, 0.1],
         noCrit: true,
+        penetrate: () => 1.0,
         isSingle: () => true,
       }),
       s1_bis: new Skill({
@@ -11057,6 +11058,8 @@ export const Heroes: Record<string, Hero> = {
         rate: () => 0.3,
         pow: () => 1,
         isExtra: true,
+        noCrit: true,
+        penetrate: () => 1.0,
         isAOE: () => true,
       }),
       s3: new Skill({
@@ -11065,6 +11068,7 @@ export const Heroes: Record<string, Hero> = {
         pow: () => 0.95,
         enhance: [0.05, 0.05, 0.05, 0, 0.05, 0.05, 0.1],
         noCrit: true,
+        penetrate: () => 1.0,
         isAOE: () => false,
       })
     }

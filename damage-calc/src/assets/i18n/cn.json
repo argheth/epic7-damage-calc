@@ -934,7 +934,7 @@
         "twistedEidolonKayronFlashSlash": "闪光斩",
         "sezEncroach": "蚕食",
         "zioDisappear": "灰飞烟灭",
-        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks and Exclusive Equipments. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
+        "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks, Exclusive Equipments, and new Mitigation/Reduction passives. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
         "harsettiWarning": "Harsetti的技能3描述说，它具有HP的扩展，但是乘数似乎还不包括它，因此她的技能3伤害可能是不正确的，直到我们知道她的HP缩放。"
     },
     "titles": {
@@ -1080,6 +1080,8 @@
         "aurius": "亚乌利斯 (满破时)",
         "tCrozet": "不法之徒克罗泽 (被动)",
         "eaton": "伊顿 (被动)",
-        "dracoPlate": "龙族板甲 (满破时)"
+        "dracoPlate": "龙族板甲 (满破时)",
+        "lqcPassive": "Little Queen Charlotte (S2 Passive)",
+        "estelleMitigation": "Estelle (S2 Passive)"
     }
 }

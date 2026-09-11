@@ -938,7 +938,7 @@
     "twistedEidolonKayronFlashSlash": "閃光の一撃",
     "sezEncroach": "侵入します",
     "zioDisappear": "消える",
-    "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks and Exclusive Equipments. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
+    "damageCalculatorUpdates": "Sep 10 2026 update: Added Lisette Divinity stacks, Exclusive Equipments, and new Mitigation/Reduction passives. \n\nPlease reach out to me if you find any bugs! @argheth on Discord or Reddit.",
     "harsettiWarning": "ハルセティのスキル3の説明には、HPスケーリングがあると述べていますが、乗数にはまだ含まれていないようであるため、ここでのスキル3のダメージは、HPスケーリングがわかるまで不正確になるでしょう。"
   },
   "titles": {
@@ -1085,6 +1085,8 @@
     "aurius": "アウリウス (Max)",
     "tCrozet": "無法者 クロゼ (スキル2パッシブ)",
     "eaton": "イートン (スキル2パッシブ)",
-    "dracoPlate": "龍鱗の鎧"
+    "dracoPlate": "龍鱗の鎧",
+    "lqcPassive": "Little Queen Charlotte (S2 Passive)",
+    "estelleMitigation": "Estelle (S2 Passive)"
   }
 }
