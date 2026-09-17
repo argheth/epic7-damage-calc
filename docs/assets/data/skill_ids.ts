@@ -929,6 +929,11 @@ export const SkillIDs: Record<string, Record<string, string>> = {
         "s2": "sk_c2016_2",
         "s3": "sk_c2016_3"
     },
+    "abyssal_yufine_pre_balance": {
+        "s1": "sk_c2016_1",
+        "s2": "sk_c2016_2",
+        "s3": "sk_c2016_3"
+    },
     "shooting_star_achates": {
         "s1": "sk_c2017_1",
         "s2": "sk_c2017_2",
@@ -1935,4 +1940,14 @@ export const SkillIDs: Record<string, Record<string, string>> = {
         "s2": "sk_c5112_2",
         "s3": "sk_c5112_3"
     },
+    "renoa": {
+        "s1": "sk_cplaceholder_1",
+        "s2": "sk_cplaceholder_2",
+        "s3": "sk_cplaceholder_3"
+    },
+    "haru": {
+        "s1": "sk_cplaceholder_1",
+        "s2": "sk_cplaceholder_2",
+        "s3": "sk_cplaceholder_3"
+    }
 }

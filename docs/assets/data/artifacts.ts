@@ -559,7 +559,7 @@ export const Artifacts: Record<string, Artifact> = {
     name: 'Spear of a New Dawn',
     type: ArtifactDamageType.aftermath,
     artifactSpecific:['targetDefenseDownAftermath'],
-    attackPercent: 0.4,
+    attackPercent: 0.5,
     penetrate: 0.7,
     exclusive: HeroClass.knight,
     applies: (skill: Skill) => skill.id === 's1' || skill.s1Benefits,
@@ -574,13 +574,9 @@ export const Artifacts: Record<string, Artifact> = {
   sphere_of_sadism: new Artifact({
     id: 'sphere_of_sadism',
     name: 'Sphere of Sadism',
-    artifactSpecific:['casterHasBarrier', 'casterMaxHP'],
-    scale:[0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2],
+    scale:[0.08, 0.088, 0.096, 0.104, 0.112, 0.12, 0.128, 0.136, 0.144, 0.152, 0.16],
     type: ArtifactDamageType.damage,
     exclusive: HeroClass.knight,
-    barrier: (hero: Hero, skill: Skill, artifact: Artifact, inputValues: DamageFormData, attackMultiplier: number, soulburn: boolean, barrierScale: number) => inputValues.casterFinalMaxHP(artifact) * barrierScale,
-    barrierScale: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15],
-    applies: (skill: Skill, inputValues: DamageFormData, soulburn: boolean) => skill.isSingle(inputValues, soulburn) && inputValues.casterHasBarrier,
   }),
   star_of_the_deep_sea: new Artifact({
     id: 'star_of_the_deep_sea',
