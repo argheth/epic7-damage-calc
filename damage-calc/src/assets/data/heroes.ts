@@ -4925,6 +4925,49 @@ export const Heroes: Record<string, Hero> = {
       })
     }
   }),
+  haru: new Hero({
+    element: HeroElement.ice,
+    class: HeroClass.warrior,
+    heroSpecific: ['casterMaxHP', 'casterFullFocus'],
+    baseAttack: 996,
+    baseHP: 7323,
+    baseDefense: 657,
+    skills: {
+      s1: new Skill({
+        id: 's1',
+        hpScaling: true,
+        rate: () => 0.6,
+        pow: () => 1,
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * 0.08,
+        flatTip: () => ({ casterMaxHP: 8 }),
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        isSingle: () => true,
+      }),
+      s1_bis: new Skill({
+        id: 's1_bis',
+        name: 'haruPowerStrike',
+        hpScaling: true,
+        rate: () => 0.5,
+        pow: () => 1,
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * 0.11,
+        flatTip: () => ({ casterMaxHP: 11 }),
+        isExtra: true,
+        penetrate: () => 1,
+        isSingle: () => true,
+      }),
+      s3: new Skill({
+        id: 's3',
+        hpScaling: true,
+        rate: () => 0.1,
+        pow: () => 1,
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * 0.02,
+        flatTip: () => ({ casterMaxHP: 2 }),
+        penetrate: () => 0.7,
+        isSingle: () => true,
+        enhance: [0.05, 0.05, 0, 0.05, 0.15],
+      })
+    }
+  }),
   hataan: new Hero({
     element: HeroElement.fire,
     class: HeroClass.thief,
@@ -8697,6 +8740,44 @@ export const Heroes: Record<string, Hero> = {
       })
     }
   }),
+  renoa: new Hero({
+    element: HeroElement.dark,
+    class: HeroClass.ranger,
+    heroSpecific: ['casterDefense', 'dirgeBullets'],
+    baseAttack: 970,
+    baseHP: 5299,
+    baseDefense: 603,
+    skills: {
+      s1: new Skill({
+        id: 's1',
+        rate: () => 0.35,
+        pow: () => 1,
+        defenseScaling: true,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalDefense(artifact) * 0.08,
+        flatTip: () => ({ casterDefense: 8 }),
+        critDmgBoost: (soulburn: boolean, inputValues: DamageFormData) => inputValues.dirgeBullets * 0.2,
+        critDmgBoostCapped: true,
+        critDmgBoostTip: (soulburn: boolean) => ({ dirgeBullets: 20 }), 
+        isSingle: () => true,
+      }),
+      s1_bis: new Skill({
+        id: 's1_bis',
+        name: 'renoaDirgeBullet',
+        rate: () => 0.25,
+        pow: () => 1.3,
+        defenseScaling: true,
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalDefense(artifact) * 0.08,
+        flatTip: () => ({ casterDefense: 8 }),
+        critDmgBoost: (soulburn: boolean, inputValues: DamageFormData) => inputValues.dirgeBullets * 0.2,
+        critDmgBoostCapped: true,
+        critDmgBoostTip: (soulburn: boolean) => ({ dirgeBullets: 20 }), 
+        isSingle: () => true,
+        isExtra: true,
+      }),
+    },
+  }),
+
   requiem_roana: new Hero({
     element: HeroElement.dark,
     class: HeroClass.mage,
