@@ -132,7 +132,7 @@ export class DamageService {
     return {
       rate: skill.rate(soulburn, this.damageForm, isExtra),
       pow: skill.pow(soulburn, this.damageForm),
-      mult: Math.round(((skill.mult(soulburn, this.damageForm, this.currentArtifact, this.currentHero.getAttack(this.currentArtifact, this.damageForm, this.getGlobalAttackMult(), skill, soulburn, HitType.crit)) - 1) * 100)), // TODO: change anything checking for this to be null to check for -1
+      mult: Math.round(((skill.mult(soulburn, this.damageForm, this.currentArtifact, this.currentHero.getAttack(this.currentArtifact, this.damageForm, this.getGlobalAttackMult(), skill, soulburn, HitType.crit)) - 1) * 1000))/10, // TODO: change anything checking for this to be null to check for -1
       multTip: this.languageService.getSkillModTip(skill.multTip(soulburn)),
       afterMathDmg: Math.round(this.currentHero.getAfterMathSkillDamage(skill, HitType.crit, soulburn, this.currentArtifact, this.damageForm, this.getGlobalAttackMult(), this.getGlobalDefenseMult(true), this.dataService.currentTarget)),
       afterMathFormula: Object.keys(formattedAftermathFormula).length ? this.languageService.getSkillModTip(formattedAftermathFormula) : '',
