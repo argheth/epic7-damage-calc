@@ -372,7 +372,7 @@ export const TargetReductionPresetGroups: Record<string, ReductionPreset[]> = {
             id: 'cArmin',
             name: 'Crimson Armin (S2 Passive)',
             label: '15%',
-            damageReduction: 15,
+            damageReduction: 20,
             icon: 'heroes/crimson_armin-icon'
         },
         {
