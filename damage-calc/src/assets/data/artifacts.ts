@@ -243,6 +243,15 @@ export const Artifacts: Record<string, Artifact> = {
     barrierScale: [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1],
     exclusive: HeroClass.thief
   }),
+  flame_dragons_jewel: new Artifact({
+    id: 'flame_dragons_jewel',
+    name: 'Flame Dragon\'s Jewel',
+    artifactSpecific:['artifactProc'],
+    type: ArtifactDamageType.attack,
+    scale: [0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2],
+    exclusive: HeroClass.thief,
+    ignoreDamageTransfer: (inputValues: DamageFormData) => inputValues.artifactProc
+  }),
   frame_of_light: new Artifact({
     id: 'frame_of_light',
     name: 'Frame of Light',

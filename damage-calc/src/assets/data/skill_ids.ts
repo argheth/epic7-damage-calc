@@ -1949,5 +1949,10 @@ export const SkillIDs: Record<string, Record<string, string>> = {
         "s1": "sk_cplaceholder_1",
         "s2": "sk_cplaceholder_2",
         "s3": "sk_cplaceholder_3"
+    },
+    "mei_lin": {
+        "s1": "mei_lin_001",
+        "s2": "mei_lin_002"
     }
+
 }

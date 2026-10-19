@@ -560,7 +560,7 @@ export const Heroes: Record<string, Hero> = {
     baseAttack: 1304,
     baseHP: 5663,
     baseDefense: 668,
-    heroSpecific: ['targetBurnDetonate'],
+    heroSpecific: ['targetBurnDetonate', 'exclusiveEquipment1'],
     dot: [DoT.burn],
     innateAttackIncrease: (inputValues: DamageFormData) => {
       let boost = 0.35;
@@ -575,7 +575,7 @@ export const Heroes: Record<string, Hero> = {
         rate: () => 0.2,
         pow: () => 1,
         detonate: DoT.burn,
-        detonation: () => 1.3,
+        detonation: () => (_soulburn: boolean, inputValues: DamageFormData) => inputValues.exclusiveEquipment1 ? 1.4 : 1.3,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         isSingle: () => true,
       }),
@@ -7423,6 +7423,32 @@ export const Heroes: Record<string, Hero> = {
       })
     }
   }),
+  mei_lin: new Hero({
+    element: HeroElement.fire,
+    class: HeroClass.thief,
+    baseAttack: 1208,
+    baseHP: 5178,
+    baseDefense: 508,
+    heroSpecific: ['casterZealStack', 'heavenlyFlameDragon'],
+    skills: {
+      s1: new Skill({
+        id: 's1',
+        rate: () => 0.9 ,
+        pow: () => 1,
+        enhance: [0.05, 0.05, 0.05, 0.15],
+        mult: (_soulburn: boolean, inputValues: DamageFormData) => inputValues.heavenlyFlameDragon ? 2 : 1,
+        multTip: () => ({ HeavenlyFlameDragon: 100 }),
+        isSingle: () => true,
+      }),
+      s2: new Skill({
+        id: 's2',
+        rate: (_soulburn: boolean, inputValues: DamageFormData) => (1 + inputValues.casterZealStack * 0.7) * (inputValues.heavenlyFlameDragon ? 2 : 1),
+        pow: () => 0.95,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
+        isSingle: () => true,
+      })
+    }
+  }), 
   melany: new Hero({
     element: HeroElement.fire,
     class: HeroClass.warrior,
@@ -7546,12 +7572,14 @@ export const Heroes: Record<string, Hero> = {
     baseAttack: 1208,
     baseHP: 5178,
     baseDef: 508,
-    heroSpecific: ['casterMaxHP', 'targetMaxHP'],
+    heroSpecific: ['casterMaxHP', 'targetMaxHP', 'exclusiveEquipment2'],
     skills: {
       s1: new Skill({
         id: 's1',
         onlyCrit: () => true,
-        rate: (soulburn: boolean) => soulburn ? 1.8 : 1.1,
+        rate: (soulburn: boolean, inputValues: DamageFormData) => soulburn
+          ? (inputValues.exclusiveEquipment2 ? 1.9 : 1.8)
+          : (inputValues.exclusiveEquipment2 ? 1.2 : 1.1),
         pow: () => 1,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         isSingle: () => true,

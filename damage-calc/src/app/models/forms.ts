@@ -88,6 +88,16 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
         min: 0,
         defaultValue: 0
     },
+    casterZealStack: {
+        max: 2,
+        min: 0,
+        defaultValue: 0,
+        step: 1,
+        icon: 'buffs/zeal-buff.png'
+    },
+    heavenlyFlameDragon: {
+        icon: 'skills/mei_lin_003.png'
+    },
     casterDefenseUp: {
         icon: 'buffs/defense-buff.png'
     },
@@ -644,6 +654,8 @@ export class DamageFormData {
     casterHasNeoPhantomSword: boolean;
     casterHasDemonBladeUnleashed: boolean;
     targetHasDemonBladeUnleashed: boolean;
+    casterZealStack: number;
+    heavenlyFlameDragon: boolean;
     casterHasStealth: boolean;
     casterHasTrauma: boolean;
     casterPilfered: boolean;
@@ -834,6 +846,8 @@ export class DamageFormData {
         this.casterHasSpecialFriendship = _.get(data, 'casterHasSpecialFriendship', false);
         this.casterHasSuperhumanization = _.get(data, 'casterHasSuperhumanization', false);
         this.targetHasSuperhumanization = _.get(data, 'targetHasSuperhumanization', false);
+        this.casterZealStack = _.get(data, 'casterZealStack', 0);
+        this.heavenlyFlameDragon = _.get(data, 'heavenlyFlameDragon', false);
         this.casterHasPossession = _.get(data, 'casterHasPossession', false);
         this.casterHasIndomitable = _.get(data, 'casterHasIndomitable', false);
         this.casterInvincible = _.get(data, 'casterInvincible', false);
