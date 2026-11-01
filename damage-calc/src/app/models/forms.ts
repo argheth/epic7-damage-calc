@@ -593,6 +593,17 @@ export const FormDefaults: Record<string, {max?: number, min?: number, defaultVa
         min: 0,
         defaultValue: 0
     },
+    casterPenBuff: {
+        icon: 'buffs/penetration-buff.png',
+        default: false
+    },
+    casterPenGreaterBuff: {
+        icon: 'buffs/greater-penetration-buff.png',
+        default: false
+    },
+    casterDetermination: {
+        icon: 'buffs/determination-buff.png'
+    }
 }
 
 export const TargetAttackModifiers = [
@@ -621,6 +632,7 @@ export class DamageFormData {
     casterDefense: number;
     casterDefenseUp: boolean;
     casterDefenseDown: boolean;
+    casterDetermination: boolean;
     casterElementalWisdomStack: number;
     casterEffectiveness: number;
     casterPromotionStack: number;
@@ -636,6 +648,8 @@ export class DamageFormData {
     casterBuffed: boolean;
     casterMorale: boolean;
     casterMoraleStack: number;
+    casterPenBuff: boolean;
+    casterPenGreaterBuff: boolean;
     casterHasBzzt: boolean;
     casterHasGodOfBattle: boolean;
     casterHasCollapse: boolean;
@@ -805,6 +819,7 @@ export class DamageFormData {
         this.casterDefense = _.get(data, 'casterDefense', 750);
         this.casterDefenseUp = _.get(data, 'casterDefenseUp', false);
         this.casterDefenseDown = _.get(data, 'casterDefenseDown', false);
+        this.casterDetermination = _.get(data, 'casterDetermination', false);
         this.casterEnraged = _.get(data, 'casterEnraged', false);
         this.casterMorale = _.get(data, 'casterMorale', false);
         this.casterMoraleStack = _.get(data, 'casterMoraleStack', 0);
@@ -823,6 +838,8 @@ export class DamageFormData {
         this.casterHasBzzt = _.get(data, 'casterHasBzzt', true);
         this.casterHasGodOfBattle = _.get(data, 'casterHasGodOfBattle', false);
         this.casterHasCascade = _.get(data, 'casterHasCascade', false);
+        this.casterPenBuff = _.get(data, 'casterPenBuff', false);
+        this.casterPenGreaterBuff = _.get(data, 'casterPenGreaterBuff', false);
         this.casterOverload = _.get(data, 'casterOverload', false);
         this.casterEnergyDepletion = _.get(data, 'casterEnergyDepletion', false);
         this.casterHasCollapse = _.get(data, 'casterHasCollapse', false);
@@ -1042,6 +1059,7 @@ export class DamageFormData {
                 * (!this.inBattleHP && this.casterHasGodOfBattle ? BattleConstants.casterHasGodOfBattle : 1)
                 * (!this.inBattleHP && this.casterLingeringFragranceStack ? (1 + this.casterLingeringFragranceStack * BattleConstants.lingeringFragrance) : 1)
                 * (!this.inBattleHP && this.divinity ? (1 + this.divinity * BattleConstants.divinity) : 1)
+                * (!this.inBattleHP && this.casterDetermination ? (1 + BattleConstants.casterDetermination) : 1)
                );
     }
 

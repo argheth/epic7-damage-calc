@@ -1953,6 +1953,15 @@ export const SkillIDs: Record<string, Record<string, string>> = {
     "mei_lin": {
         "s1": "mei_lin_001",
         "s2": "mei_lin_002"
-    }
-
+    },
+    "moro": {
+        "s1": "sk_c2187_1",
+        "s2": "sk_c2187_2",
+        "s3": "sk_c2187_3"
+    },
+    "bunny_girl_mafia_yufine": {
+        "s1": "sk_c7016_1",
+        "s2": "sk_c7016_2",
+        "s3": "sk_c7016_3"
+    },
 }

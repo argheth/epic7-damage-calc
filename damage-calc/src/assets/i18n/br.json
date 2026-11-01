@@ -448,6 +448,8 @@
     "caster_hp_above_50pc": "Vida abaixo de 50% do Herói",
     "caster_hp_pc": "% Vida do Herói",
     "caster_hp": "Vida do Herói",
+    "casterPenBuff": "Increase Penetration",
+    "casterPenGreaterBuff": "Increase Penetration (Greater)",
     "caster_immense_power": "Herói tem Poder Grandioso",
     "caster_invincible": "Herói está Invencível",
     "caster_max_hp": "Vida Máxima do Herói",

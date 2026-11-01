@@ -2123,6 +2123,40 @@ export const Heroes: Record<string, Hero> = {
       }),
     }
   }),
+
+
+  bunny_girl_mafia_yufine: new Hero({
+    element: HeroElement.ice,
+    class: HeroClass.knight,
+    baseAttack: 894,
+    baseHP: 6840,
+    baseDefense: 694,
+    heroSpecific: ['casterMaxHP', 'casterDetermination'],
+    skills: {
+      s1: new Skill({
+        id: 's1',
+        soulburn: true,
+        hpScaling: true,
+        rate: (soulburn: boolean) => soulburn ? 1 : 0.5,
+        pow: () => 1,
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * (soulburn ? 0.1 : 0.05),
+        flatTip: (soulburn: boolean) => ({ casterMaxHP: soulburn ? 10 : 5 }),
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        isSingle: () => true,
+      }),
+      s1_bis: new Skill({
+        id: 's1_bis',
+        name: 'bunnyGirlMafiaYufineSettlement',
+        hpScaling: true,
+        rate: () => 0.5,
+        pow: () => 1,
+        flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * 0.15,
+        flatTip: () => ({ casterMaxHP: 15 }),
+        isAOE: () => true,
+        soulburn: false
+      }),
+    }
+  }),
   butcher_corps_inquisitor: new Hero({
     element: HeroElement.fire,
     class: HeroClass.knight,
@@ -7796,6 +7830,29 @@ export const Heroes: Record<string, Hero> = {
         rate: () => 1,
         pow: () => 0.9,
         enhance: [0.05, 0, 0.05, 0, 0.1, 0.1],
+        isSingle: () => true,
+      }),
+    }
+  }),
+  moro: new Hero({
+    element: HeroElement.light,
+    class: HeroClass.thief,
+    baseAttack: 1075,
+    baseHP: 5562,
+    baseDefense: 487,
+    skills: {
+      s1: new Skill({
+        id: 's1',
+        rate: () => 1,
+        pow: () => 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        isSingle: () => true,
+      }),
+      s3: new Skill({
+        id: 's3',
+        rate: () => 1.5,
+        pow: () => 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
         isSingle: () => true,
       }),
     }

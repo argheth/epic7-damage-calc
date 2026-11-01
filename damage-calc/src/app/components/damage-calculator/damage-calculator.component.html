@@ -163,6 +163,18 @@
                     {{'special_friendship' | translate:'form'}}
                 </span>
             </mat-checkbox>
+            <mat-checkbox class="small-margin-top" [checked]="inputValues.casterPenBuff" (change)="inputChange('casterPenBuff', $event.checked)">
+                <span class="neat-container">
+                    <img class="png-icon medium tiny-margin-right" src="assets/buffs/penetration-buff.png" alt="pen buff">
+                    {{'casterPenBuff' | translate:'form'}}
+                </span>
+            </mat-checkbox>
+            <mat-checkbox class="small-margin-top" [checked]="inputValues.casterPenGreaterBuff" (change)="inputChange('casterPenGreaterBuff', $event.checked)">
+                <span class="neat-container">
+                    <img class="png-icon medium tiny-margin-right" src="assets/buffs/greater-penetration-buff.png" alt="greater pen buff">
+                    {{'casterPenGreaterBuff' | translate:'form'}}
+                </span>
+            </mat-checkbox>
             <mat-checkbox class="small-margin-top" [checked]="inputValues.casterMorale" (change)="inputChange('casterMorale', $event.checked); updateFormInputs()">
                 <span class="small-margin-top neat-container morale-row">
                     <span class="morale-icon-text">
@@ -608,7 +620,7 @@
                     </ng-container>
                   
                     <ng-container matColumnDef="crush">
-                      <th mat-header-cell *matHeaderCellDef> {{"crushingHit" | translate:'ui'}} </th>
+                      <th mat-header-cell *matHeaderCellDef> {{"heavyBlow" | translate:'ui'}} </th>
                       <td mat-cell *matCellDef="let element"> {{element.crush != null ? element.crush : 'nonApplicable' | translate:'skills'}} </td>
                     </ng-container>
 
