@@ -2141,7 +2141,9 @@ export const Heroes: Record<string, Hero> = {
         pow: () => 1,
         flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * (soulburn ? 0.1 : 0.05),
         flatTip: (soulburn: boolean) => ({ casterMaxHP: soulburn ? 10 : 5 }),
+        penetrate: () => 1.0,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        noCrit: true,
         isSingle: () => true,
       }),
       s1_bis: new Skill({
@@ -2152,7 +2154,9 @@ export const Heroes: Record<string, Hero> = {
         pow: () => 1,
         flat: (soulburn: boolean, inputValues: DamageFormData, artifact: Artifact) => inputValues.casterFinalMaxHP(artifact) * 0.15,
         flatTip: () => ({ casterMaxHP: 15 }),
+        penetrate: () => 1.0,
         isAOE: () => true,
+        noCrit: true,
         soulburn: false
       }),
     }
